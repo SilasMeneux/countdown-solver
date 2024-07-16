@@ -29,25 +29,25 @@ def get_longest_word(letters, dictionary):
 
     return longest_word
 
-if __name__ == "__main__":
-    dictionary_file = "words.txt"  # Replace with your dictionary file path
-    
-    try:
-        dictionary = load_dictionary(dictionary_file)
-    except FileNotFoundError:
-        print(f"Error: Dictionary file '{dictionary_file}' not found.")
-        exit(1)
-    except Exception as e:
-        print(f"Error loading dictionary file: {e}")
-        exit(1)
-    
-    letters = input("Enter 9 letters: ").strip()
-    
-    if len(letters) != 9:
-        print("Please enter exactly 9 letters.")
+
+dictionary_file = "words.txt"  # Replace with your dictionary file path
+
+try:
+    dictionary = load_dictionary(dictionary_file)
+except FileNotFoundError:
+    print(f"Error: Dictionary file '{dictionary_file}' not found.")
+    exit(1)
+except Exception as e:
+    print(f"Error loading dictionary file: {e}")
+    exit(1)
+
+letters = input("Enter 9 letters: ").strip()
+
+if len(letters) != 9:
+    print("Please enter exactly 9 letters.")
+else:
+    longest_word = get_longest_word(letters, dictionary)
+    if longest_word:
+        print(f"The longest word is: {longest_word}")
     else:
-        longest_word = get_longest_word(letters, dictionary)
-        if longest_word:
-            print(f"The longest word is: {longest_word}")
-        else:
-            print("No valid words found.")
+        print("No valid words found.")
