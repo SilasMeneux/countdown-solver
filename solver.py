@@ -8,6 +8,8 @@ with open('words.txt', 'r') as file:
 
    
 letters = (input("Enter the letters: "))
+letters= list(letters)
+print(letters)
 
 print("Letters:", letters)
 
