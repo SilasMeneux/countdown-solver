@@ -4,3 +4,10 @@ while answer not in [1, 2, 3]:
     1. Words
     2. Numbers
     3. Conundrum"""))
+
+if answer == 1:
+    import wordgame
+elif answer == 2:
+    print("blank")
+else:
+    import solver
