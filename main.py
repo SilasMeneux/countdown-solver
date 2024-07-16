@@ -8,6 +8,6 @@ while answer not in [1, 2, 3]:
 if answer == 1:
     import wordgame
 elif answer == 2:
-    print("blank")
+    import numbersolver
 else:
     import solver
