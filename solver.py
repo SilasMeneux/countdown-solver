@@ -18,7 +18,7 @@ for order in allorders:
         wordlist.append(word)
 
 
+wordlistwithoutdupes = list(set(wordlist))
 
-
-for words in wordlist:
+for words in wordlistwithoutdupes:
     print(words)
